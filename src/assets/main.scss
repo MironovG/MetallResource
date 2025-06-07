@@ -17,11 +17,14 @@
 main {
   flex-grow: 1;
   padding: 30px;
+  @include media-breakpoint-down(sm) {
+    padding: 0px 30px;
+  }
 }
 
 
 .carousel-btn {
-  top: 50%;
+  top: 45%;
   bottom: unset;
   background-color: black;
   border-radius: 50px;
