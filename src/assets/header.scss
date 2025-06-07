@@ -1,0 +1,42 @@
+.header_top {
+  background-color: #141414;
+}
+
+.navbar {
+  background-color: unset !important;
+}
+  .nav-link {
+    color: white !important;
+    &:hover {
+      color: blueviolet !important;
+    }
+  }
+.navbar-expand-lg {
+  .navbar-nav {
+    gap: 30px !important;
+  }
+}
+.navbar-toggler {
+  background-color: white;
+}
+.btn-form {
+  background-color: #141414;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  &:hover {
+    background-color: #3a1564;
+    transition: 0.4s;
+  }
+}
+@include media-breakpoint-down(sm) {
+  .container-fluid {
+    justify-content: space-between !important;
+  }
+  .navbar-expand-lg {
+    .navbar-nav {
+      gap: 10px !important;
+    }
+  }
+}
+

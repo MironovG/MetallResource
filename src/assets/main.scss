@@ -1,0 +1,102 @@
+@import "/node_modules/bootstrap/scss/bootstrap";
+@import "header.scss";
+@import "footer.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  background-color: #EAECEE;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  padding: 30px;
+}
+
+
+.carousel-btn {
+  top: 50%;
+  bottom: unset;
+  background-color: black;
+  border-radius: 50px;
+  padding: 10px;
+  width: 4%;
+  opacity: 0.1;
+  @media(max-width: 992px) {
+    width: auto;
+  }
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.carousel-inner {
+  padding: 30px 100px
+}
+
+.carousel-item {
+  min-height: 515px;
+  @include media-breakpoint-down(xl) {
+    min-height: 400px;
+  }
+}
+
+
+.carousel-item-img {
+  width: 100%;
+  height: auto;
+}
+
+.btn_write-us {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 15px;
+  background-color: #EAECEE;
+  &:hover {
+    background-color: #3a1564;
+    color: white;
+    transition: 0.8s;
+  }
+}
+
+.scrollspy-example {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.card-img-top {
+  height: 159px;
+}
+
+.card-img-service {
+  height: 120px;
+  width: 120px;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 255, 1);
+    transform: scale(1.05);
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 999;
+}
