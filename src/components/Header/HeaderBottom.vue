@@ -13,7 +13,7 @@
             </svg>
             <div class="d-flex flex-column">
               <span class="fw-bold">Адрес</span>
-              <span>ул.Тверкаская дом 9 корпус 6</span>
+              <span>Старо-Петергофский пр-кт, д. 22</span>
             </div>
           </div>
         </div>

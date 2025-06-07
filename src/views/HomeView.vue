@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-    <div class="py-4 rounded-3">
       <swiper/>
-    </div>
   </div>
   <advantages/>
 
