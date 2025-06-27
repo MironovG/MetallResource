@@ -10,15 +10,14 @@
     </div>
   </div>
   <div class="row row-cols-1 row-cols-md-4 gy-4">
-    <div v-for="(card, index) in cards"
+    <div v-for="(card, index) in store.products"
          :key="index"
          class="col">
-      <div class="card h-100 cursor-pointer"
-           @click="Object.assign(currentSelectedProduct, card);"
-           data-bs-toggle="modal" data-bs-target="#modalForProduct">
+      <div :class="['card h-100 cursor-pointer', {'select': card['selected']}]"
+           @click="card['selected'] ? store.removeProductFromState(card.id) : store.addProductInState(card.id)">
         <img :src="card.img" class="card-img-top" alt="card-img">
         <div class="card-body">
-          <p class="fs-5 fw-bold mb-1">{{card.title}}</p>
+          <h6 class="fw-bold mb-1">{{card.title}}</h6>
           <p class="card-text">{{ card.description }}</p>
         </div>
       </div>
@@ -35,7 +34,7 @@
       <div class="row row-cols-md-2 row-cols-1">
         <div class="col">
           <div class="d-flex flex-column gap-3">
-            <img :src="currentSelectedProduct?.img" class="card-img-top" alt="product">
+            <img class="card-img-top" alt="product">
             <span class="text-gray">
               Заявка будет отравлена по данному товару
             </span>
@@ -69,14 +68,13 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref } from 'vue'
 import { useStore } from '@/store.js'
 import ModalComponent from '@/components/ModalComponent.vue'
 import Overlay from '@/components/Overlay.vue'
 
 const store = useStore();
 
-const currentSelectedProduct = reactive({});
 const modalForProduct = ref(null);
 const btnCloseModal = ref(null);
 
@@ -89,90 +87,5 @@ const sendData = async (form) => {
     method: 'POST',
     body: formData,
   });
-
-  console.log(res);
 }
-
-const cards = ref([
-  {
-    img: '/public/products/ugolok.jpg',
-    title: 'Уголок стальной (равнополочный и разнополочный)',
-    description: 'Стальной уголок – универсальный элемент для создания каркасов, опорных конструкций и армирования. Отличается высокой жесткостью и устойчивостью к нагрузкам.'
-  },
-  {
-    img: '/public/products/listovoj-prokat_2b.jpg',
-    title: 'Листовой прокат',
-    description: 'Листовой прокат – металлические листы разной толщины, используемые в машиностроении, строительстве и производстве. Доступен в горячекатаном и холоднокатаном исполнении.'
-  },
-  {
-    img: '/public/products/profilnaya_truba_stat_2.jpg',
-    title: 'Труба профильная',
-    description: 'Профильная труба с прямоугольным или квадратным сечением применяется в строительстве, мебельной и машиностроительной отраслях благодаря высокой прочности и удобству монтажа.'
-  },
-  {
-    img: '/public/products/truba-vus-2_0x0_33f.jpg',
-    title: 'Труба электросварная, ВГП и Бесшовная',
-    description: 'Прочная и доступная труба из стального листа, соединённого сварным швом. Применяется в строительстве, изготовлении металлоконструкций, ограждений и систем вентиляции.'
-  },
-  {
-    img: '/public/products/color-metal.jpg',
-    title: 'Цветной металл',
-    description: 'Цветные металлы, такие как медь, алюминий и латунь, обладают высокой коррозионной стойкостью и отличной электропроводностью. Применяются в электротехнике, строительстве и машиностроении.'
-  },
-  {
-    img: '/public/products/armatura.jpg',
-    title: 'Арматура',
-    description: 'Арматура используется для усиления железобетонных конструкций, обеспечивая прочность и долговечность. Доступна в различных классах и диаметрах, применяется в строительстве и промышленности.'
-  },
-  {
-    img: '/public/products/balka-dvutavrovaya.jpg',
-    title: 'Балка двутавровая',
-    description: 'Двутавровая балка – это прочный металлический профиль, широко используемый в строительстве для возведения несущих конструкций, мостов и перекрытий, обеспечивая высокую устойчивость к нагрузкам.'
-  },
-  {
-    img: '/public/products/shveller.jpg',
-    title: 'Швеллер',
-    description: 'Швеллер – металлический профиль с П-образным сечением, применяемый в строительстве, машиностроении и производстве металлоконструкций для усиления прочности конструкций.'
-  },
-  {
-    img: '/public/products/polosa.jpg',
-    title: 'Полоса стальная',
-    description: 'Стальная полоса используется в строительстве, производстве металлоконструкций, а также для изготовления кованных изделий и крепежных элементов.'
-  },
-  {
-    img: '/public/products/krug_metall.jpg',
-    title: 'Круг стальной',
-    description: 'Стальной круг – прокатный продукт, применяемый в машиностроении, строительстве и производстве деталей. Отличается высокой прочностью и стойкостью к нагрузкам.'
-  },
-  {
-    img: '/public/products/katanka-6-mm.jpg',
-    title: 'Проволока стальная',
-    description: 'Стальная проволока широко применяется в строительстве, производстве сеток, канатов и крепежных изделий. Отличается высокой гибкостью и прочностью.'
-  },
-  {
-    img: '/public/products/nastil.jpg',
-    title: 'Профнастил',
-    description: 'Профнастил – это металлические листы с гофрированной поверхностью, используемые для кровли, ограждений и облицовки зданий. Обеспечивает долговечность и устойчивость к погодным условиям.'
-  },
-  {
-    img: '/public/products/setka-svarnaya.jpg',
-    title: 'Сетка сварная',
-    description: 'Сварная сетка используется в строительстве, сельском хозяйстве и промышленности для армирования конструкций, изготовления заборов и перегородок.'
-  },
-  {
-    img: '/public/products/specstal.webp',
-    title: 'Спецстали и сплавы',
-    description: 'Специальные стали и сплавы обладают особыми свойствами, такими как повышенная прочность, жаростойкость и коррозионная стойкость, применяются в авиации, судостроении и машиностроении.'
-  },
-  {
-    img: '/public/products/prokat-nerzhaveyushhij_1b.jpg',
-    title: 'Нержавеющая сталь',
-    description: 'Нержавеющая сталь устойчива к коррозии, что делает ее идеальным материалом для медицинского оборудования, пищевой промышленности, строительства и машиностроения.'
-  },
-  {
-    img: '/public/products/zapornay_truba.jpg',
-    title: 'Трубозапорная арматура',
-    description: 'Трубозапорная арматура включает в себя вентили, задвижки и краны, используемые в трубопроводных системах для регулирования потоков жидкостей и газов.'
-  }
-])
 </script>

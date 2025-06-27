@@ -1,25 +1,30 @@
 import { defineStore } from 'pinia'
+import { cards, services } from '@/views/data/cards.js'
 
 export const useStore = defineStore('state', {
   state: () => ({
-    products: [],
-    services: [],
+    products: cards,
+    services: services,
   }),
   actions: {
     addProductInState(productId) {
-      this.products.push(productId)
+      const selectProduct = this.products.find(product => product.id === productId);
+      selectProduct['selected'] = true;
     },
 
     removeProductFromState(productId) {
-      this.products.splice(this.products.indexOf(productId), 1);
+      const removedService = this.products.find(product => product.id === productId);
+      delete removedService['selected'];
     },
 
-    addServiceInState(productId) {
-      this.services.push(productId)
+    addServiceInState(serviceId) {
+      const selectProduct = this.services.find(product => product.id === serviceId);
+      selectProduct['selected'] = true;
     },
 
-    removeServiceFromState(productId) {
-      this.services.splice(this.services.indexOf(productId), 1);
+    removeServiceFromState(serviceId) {
+      const removedService = this.services.find(product => product.id === serviceId);
+      delete removedService['selected'];
     },
   }
 })

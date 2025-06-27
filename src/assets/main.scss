@@ -85,12 +85,21 @@ main {
   width: 120px;
 }
 
-.card {
+
+.card, .service-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &-text {
+    font-size: 14px;
+  }
 
   &:hover {
-    box-shadow: 0px 4px 8px rgba(0, 0, 255, 1);
-    transform: scale(1.05);
+    box-shadow: 2px 2px 7px rgba(0, 0, 255, 1);
+    transform: scale(1.02);
+  }
+
+  &.select {
+    box-shadow: 2px 2px 7px rgba(0, 255, 0, 1);
+    transform: scale(1.02);
   }
 }
 
