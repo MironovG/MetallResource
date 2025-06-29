@@ -26,5 +26,27 @@ export const useStore = defineStore('state', {
       const removedService = this.services.find(product => product.id === serviceId);
       delete removedService['selected'];
     },
+
+    resetAllSelected() {
+      for (let item of [...this.products, ...this.services]) {
+        if ('selected' in item) {
+          delete item['selected'];
+        }
+      }
+    }
+  },
+
+  getters: {
+    selectedProduct() {
+      return this.products.filter(product => 'selected' in product)
+    },
+
+    selectedServices() {
+      return this.services.filter(service => 'selected' in service)
+    },
+    
+    isSomeSelected() {
+      return [...this.products, ...this.services].some(item => 'selected' in item);
+    }
   }
 })

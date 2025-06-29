@@ -11,25 +11,36 @@
       </div>
     </div>
   </div>
-  <div class="row row-cols-1 row-cols-md-2 gy-4">
-    <div v-for="(service, index) in store.services"
-         :key="index"
-         class="col">
-      <div :class="['h-100 service-card cursor-pointer d-flex align-items-center gap-5 bg-light p-4 border rounded-3',
+
+  <div v-show="store.isSomeSelected" class="row">
+    <div id="selectResult" class="col-10"></div>
+    <div class="col-2">
+      <select-result v-show="store.isSomeSelected" />
+    </div>
+  </div>
+
+  <teleport defer to="#selectResult" :disabled="!store.isSomeSelected">
+    <div class="row row-cols-1 row-cols-md-2 gy-4">
+      <div v-for="(service, index) in store.services"
+           :key="index"
+           class="col">
+        <div :class="['h-100 service-card cursor-pointer d-flex align-items-center gap-5 bg-light p-4 border rounded-3',
       {'select': service['selected']}]"
-           @click="service['selected'] ? store.removeServiceFromState(service.id) : store.addServiceInState(service.id)">
-        <img :src="service.img" class="card-img-service rounded-circle" alt="card-img-service">
-        <div class="card-body d-flex flex-column gap-1">
-          <p class="fs-5 fw-bold mb-0">{{ service.title }}</p>
-          <p class="card-text">{{ service.description }}</p>
+             @click="service['selected'] ? store.removeServiceFromState(service.id) : store.addServiceInState(service.id)">
+          <img :src="service.img" class="card-img-service rounded-circle" alt="card-img-service">
+          <div class="card-body d-flex flex-column gap-1">
+            <p class="fs-5 fw-bold mb-0">{{ service.title }}</p>
+            <p class="card-text">{{ service.description }}</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </teleport>
 </template>
 
 <script setup>
 import { useStore } from '@/store.js'
+import SelectResult from '@/components/SelectResult.vue'
 
 const store = useStore()
 

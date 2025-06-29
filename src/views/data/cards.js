@@ -3,175 +3,175 @@ export const cards = [
   img: '/public/products/ugolok.jpg',
   title: 'Уголок стальной (равнополочный и разнополочный)',
   description: 'Стальной уголок – универсальный элемент для создания каркасов, опорных конструкций и армирования. Отличается высокой жесткостью и устойчивостью к нагрузкам.',
-  id: (Math.random()).toFixed(4),
+  id: Math.random(),
   },
   {
     img: '/public/products/listovoj-prokat_2b.jpg',
     title: 'Листовой прокат',
     description: 'Листовой прокат – металлические листы разной толщины, используемые в машиностроении, строительстве и производстве. Доступен в горячекатаном и холоднокатаном исполнении.',
-    id: (Math.random()).toFixed(4),
+    id: Math.random(),
   },
   {
     img: '/public/products/profilnaya_truba_stat_2.jpg',
     title: 'Труба профильная',
     description: 'Профильная труба с прямоугольным или квадратным сечением применяется в строительстве, мебельной и машиностроительной отраслях благодаря высокой прочности и удобству монтажа.',
-    id: (Math.random()).toFixed(4),
+    id: Math.random(),
   },
   {
     img: '/public/products/truba-vus-2_0x0_33f.jpg',
     title: 'Труба электросварная, ВГП и Бесшовная',
     description: 'Прочная и доступная труба из стального листа, соединённого сварным швом. Применяется в строительстве, изготовлении металлоконструкций, ограждений и систем вентиляции.',
-    id: (Math.random()).toFixed(4),
+    id: Math.random(),
   },
   {
     img: '/public/products/color-metal.jpg',
     title: 'Цветной металл',
     description: 'Цветные металлы, такие как медь, алюминий и латунь, обладают высокой коррозионной стойкостью и отличной электропроводностью. Применяются в электротехнике, строительстве и машиностроении.',
-    id: (Math.random()).toFixed(4),
+    id: Math.random(),
   },
   {
     img: '/public/products/armatura.jpg',
     title: 'Арматура',
     description: 'Арматура используется для усиления железобетонных конструкций, обеспечивая прочность и долговечность. Доступна в различных классах и диаметрах, применяется в строительстве и промышленности.',
-    id: (Math.random()).toFixed(4),
+    id: Math.random(),
   },
   {
     img: '/public/products/balka-dvutavrovaya.jpg',
     title: 'Балка двутавровая',
     description: 'Двутавровая балка – это прочный металлический профиль, широко используемый в строительстве для возведения несущих конструкций, мостов и перекрытий, обеспечивая высокую устойчивость к нагрузкам.',
-    id: (Math.random()).toFixed(4),
+    id: Math.random(),
   },
   {
     img: '/public/products/shveller.jpg',
     title: 'Швеллер',
     description: 'Швеллер – металлический профиль с П-образным сечением, применяемый в строительстве, машиностроении и производстве металлоконструкций для усиления прочности конструкций.',
-    id: (Math.random()).toFixed(4),
+    id: Math.random(),
   },
   {
     img: '/public/products/polosa.jpg',
     title: 'Полоса стальная',
     description: 'Стальная полоса используется в строительстве, производстве металлоконструкций, а также для изготовления кованных изделий и крепежных элементов.',
-    id: (Math.random()).toFixed(4),
+    id: Math.random(),
   },
   {
     img: '/public/products/krug_metall.jpg',
     title: 'Круг стальной',
     description: 'Стальной круг – прокатный продукт, применяемый в машиностроении, строительстве и производстве деталей. Отличается высокой прочностью и стойкостью к нагрузкам.',
-    id: (Math.random()).toFixed(4),
+    id: Math.random(),
   },
   {
     img: '/public/products/katanka-6-mm.jpg',
     title: 'Проволока стальная',
     description: 'Стальная проволока широко применяется в строительстве, производстве сеток, канатов и крепежных изделий. Отличается высокой гибкостью и прочностью.',
-    id: (Math.random()).toFixed(4),
+    id: Math.random(),
   },
   {
     img: '/public/products/nastil.jpg',
     title: 'Профнастил',
     description: 'Профнастил – это металлические листы с гофрированной поверхностью, используемые для кровли, ограждений и облицовки зданий. Обеспечивает долговечность и устойчивость к погодным условиям.',
-    id: (Math.random()).toFixed(4),
+    id: Math.random(),
   },
   {
     img: '/public/products/setka-svarnaya.jpg',
     title: 'Сетка сварная',
     description: 'Сварная сетка используется в строительстве, сельском хозяйстве и промышленности для армирования конструкций, изготовления заборов и перегородок.',
-    id: (Math.random()).toFixed(4),
+    id: Math.random(),
   },
   {
     img: '/public/products/specstal.webp',
     title: 'Спецстали и сплавы',
     description: 'Специальные стали и сплавы обладают особыми свойствами, такими как повышенная прочность, жаростойкость и коррозионная стойкость, применяются в авиации, судостроении и машиностроении.',
-    id: (Math.random()).toFixed(4),
+    id: Math.random(),
   },
   {
     img: '/public/products/prokat-nerzhaveyushhij_1b.jpg',
     title: 'Нержавеющая сталь',
     description: 'Нержавеющая сталь устойчива к коррозии, что делает ее идеальным материалом для медицинского оборудования, пищевой промышленности, строительства и машиностроения.',
-    id: (Math.random()).toFixed(4),
+    id: Math.random(),
   },
   {
     img: '/public/products/zapornay_truba.jpg',
     title: 'Трубозапорная арматура',
     description: 'Трубозапорная арматура включает в себя вентили, задвижки и краны, используемые в трубопроводных системах для регулирования потоков жидкостей и газов.',
-    id: (Math.random()).toFixed(4),
+    id: Math.random(),
   }]
 export const services = [
   {
     img: '/public/products/color-metal.jpg',
     title: 'Плазменная резка',
     description: 'Преимущества такой резки: высокая скорость, точность, отличное качество. Применяется при изготовлении деталей сложной формы.',
-    id: (Math.random()).toFixed(4)
+    id: Math.random(),
   },
   {
     img: '/public/products/armatura.jpg',
     title: 'Лазерная резка',
     description: 'Главный плюс резки - отсутствие деформации поверхности изделия. Максимальная точность разреза, высокая скорость.',
-    id: (Math.random()).toFixed(4)
+    id: Math.random(),
   },
   {
     img: '/public/products/balka-dvutavrovaya.jpg',
     title: 'Гидроабразивная резка',
     description: 'Изделие обрабатывается при помощи сверхмощной струи воды с примесью различных абразивов. ',
-    id: (Math.random()).toFixed(4)
+    id: Math.random(),
   },
   {
     img: '/public/products/shveller.jpg',
     title: 'Резка углошлифовальной машиной',
     description: 'Резка и обработка металла производится угловой шлифовальной машиной (болгаркой).',
-    id: (Math.random()).toFixed(4)
+    id: Math.random(),
   },
   {
     img: '/public/products/ugolok.jpg',
     title: 'Ленточнопильная резка',
     description: 'Такая резка идеально подходит для круглой и профильной трубы, уголка, швеллера, круга, квадрата. ',
-    id: (Math.random()).toFixed(4)
+    id: Math.random(),
   },
   {
     img: '/public/products/listovoj-prokat_2b.jpg',
     title: 'Листовой прокат',
     description: 'Листовой прокат – металлические листы разной толщины, используемые в машиностроении, строительстве и производстве. Доступен в горячекатаном и холоднокатаном исполнении.',
-    id: (Math.random()).toFixed(4)
+    id: Math.random(),
   },
   {
     img: '/public/products/profilnaya_truba_stat_2.jpg',
     title: 'Рубка металла на гильотине',
     description: 'Этот способ отличается минимальными потерями исходного материала при производстве. ',
-    id: (Math.random()).toFixed(4)
+    id: Math.random(),
   },
   {
     img: '/public/products/truba-vus-2_0x0_33f.jpg',
     title: 'Токарно-фрезерные работы',
     description: 'Наша компания предоставляет целый спектр токарно-фрезерных работ (под заказ).',
-    id: (Math.random()).toFixed(4)
+    id: Math.random(),
   },
   {
     img: '/public/products/polosa.jpg',
     title: 'Гибка металла',
     description: 'Изготовление нестандартных позиций. ',
-    id: (Math.random()).toFixed(4)
+    id: Math.random(),
   },
   {
     img: '/public/products/krug_metall.jpg',
     title: 'Термическая обработка металла',
     description: 'Отжиг, дальнейшая нормализация, закалка и отпуск стали. ',
-    id: (Math.random()).toFixed(4)
+    id: Math.random(),
   },
   {
     img: '/public/products/katanka-6-mm.jpg',
     title: 'Производство армокаркасов и арматурной сетки',
     description: 'Незаменимы для укрепления фундамента, железобетонных конструкций.',
-    id: (Math.random()).toFixed(4)
+    id: Math.random(),
   },
   {
     img: '/public/products/nastil.jpg',
     title: 'Доставка и комплектация',
     description: 'Доставка металлопроката собственным автотранспортом.',
-    id: (Math.random()).toFixed(4)
+    id: Math.random(),
   },
   {
     img: '/public/products/setka-svarnaya.jpg',
     title: 'Услуги экспедитора',
     description: 'Организация доставки груза с гарантией сохранности.',
-    id: (Math.random()).toFixed(4)
+    id: Math.random(),
   },
 ]
