@@ -2,8 +2,7 @@
   <div class="home">
       <swiper/>
   </div>
-  <advantages/>
-
+    <advantages/>
 </template>
 
 <script setup>

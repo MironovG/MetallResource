@@ -103,7 +103,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import * as bootstrap from 'bootstrap'
 
 const advantages = ref([
   { name: 'Высокое качество', icon: 'arrow', address: 'graph-down-arrow' },
@@ -111,5 +112,11 @@ const advantages = ref([
   { name: 'Собственный склад', icon: 'building', address: 'building' },
   { name: 'Работаем в праздники', icon: 'clipboard-check', address: 'clipboard-check' },
   { name: 'Надежная репутация', icon: 'review', address: 'review' }
-])
+]);
+
+onMounted(() => {
+  new bootstrap.ScrollSpy(document.body, {
+    target: '#list-example'
+  });
+});
 </script>

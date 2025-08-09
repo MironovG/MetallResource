@@ -37,6 +37,6 @@ const tabs = ref([
   { name: 'home', title: 'О компании', id: 2 },
   { name: 'products', title: 'Продукция', id: 3 },
   { name: 'services', title: 'Услуги', id: 4 },
-  { name: 'home', title: 'Партнеры', id: 5 }
+  { name: 'partners', title: 'Партнеры', id: 5 }
 ]);
 </script>

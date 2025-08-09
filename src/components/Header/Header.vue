@@ -1,7 +1,7 @@
 <template>
   <header class="d-flex flex-column gap-3">
-    <header-top/>
-    <header-bottom/>
+    <header-top />
+    <header-bottom />
   </header>
 </template>
 
