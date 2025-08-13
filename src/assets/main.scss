@@ -93,12 +93,12 @@ main {
   }
 
   &:hover {
-    box-shadow: 2px 2px 7px rgba(0, 0, 255, 1);
+    box-shadow: 2px 2px 7px rgb(16, 16, 159);
     transform: scale(1.02);
   }
 
   &.select {
-    box-shadow: 2px 2px 7px rgba(0, 255, 0, 1);
+    box-shadow: 2px 2px 7px rgb(12, 78, 12);
     transform: scale(1.02);
   }
 }

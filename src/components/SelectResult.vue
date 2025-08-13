@@ -4,7 +4,9 @@
       <span class="fw-bold fs-5 text-center">Выбрано:</span>
       <span v-if="store.selectedProduct?.length" class="text-center">Продукция ({{ store.selectedProduct.length }})</span>
       <span v-if="store.selectedServices?.length" class="text-center">Услуги ({{ store.selectedServices.length }})</span>
-      <button class="btn-form p-1">Оформить заявку</button>
+      <button class="btn-form p-1"
+              data-bs-toggle="modal"
+              data-bs-target="#sendRequest">Оформить заявку</button>
       <button class="btn-form bg-danger-subtle p-1 text-white"
               @click="store.resetAllSelected">
         Сбросить все
