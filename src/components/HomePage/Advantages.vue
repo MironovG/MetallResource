@@ -23,7 +23,7 @@
              @click="scrollToAnchor">
             <span class="d-none d-md-block">{{ link.name }}</span>
             <svg width="16" height="16" viewBox="0 0 16 16" class="icon">
-              <use :xlink:href="`/svg/${link.address}.svg#${link.icon}`"></use>
+              <use :xlink:href="`svg/${link.address}.svg#${link.icon}`"></use>
             </svg>
           </a>
         </div>
