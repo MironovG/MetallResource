@@ -18,8 +18,9 @@
         <div id="list-example" class="list-group gap-2">
           <a v-for="(link, index) in advantages"
              :key="index"
+             :data-anchor="`list-item-${index}`"
              class="list-group-item list-group-item-action d-block d-md-flex align-items-center gap-3 py-0 py-md-1 px-1 px-md-3 justify-content-between text-center text-md-start"
-             :href="`#list-item-${index}`">
+          @click="scrollToAnchor">
             <span class="d-none d-md-block">{{ link.name }}</span>
             <svg width="16" height="16" viewBox="0 0 16 16" class="icon">
               <use :xlink:href="`/svg/${link.address}.svg#${link.icon}`"></use>
@@ -113,6 +114,14 @@ const advantages = ref([
   { name: 'Работаем в праздники', icon: 'clipboard-check', address: 'clipboard-check' },
   { name: 'Надежная репутация', icon: 'review', address: 'review' }
 ]);
+
+const scrollToAnchor = (event) => {
+  const anchor = event.currentTarget.dataset.anchor;
+  const element = document.getElementById(anchor);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
 onMounted(() => {
   new bootstrap.ScrollSpy(document.body, {

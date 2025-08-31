@@ -5,7 +5,7 @@ import Services from '@/views/Services.vue'
 import Partners from '@/views/Partners.vue'
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHashHistory('/MetallResource/'),
   routes: [
     {
       path: '/',
