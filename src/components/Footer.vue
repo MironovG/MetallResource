@@ -1,11 +1,7 @@
 <template>
   <footer>
     <div class="container">
-      <div class="row row-cols-3">
-        <div class="col">
-          Here is a footer
-        </div>
-      </div>
+      <div class="row row-cols-3"></div>
     </div>
   </footer>
 </template>
