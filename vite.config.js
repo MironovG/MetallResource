@@ -3,8 +3,13 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// https://vitejs.dev/config/
+const repoName = 'MetallResource';
+
 export default defineConfig({
+  base: `/${repoName}/`,
+  build: {
+    outDir: 'docs',
+  },
   plugins: [
     vue(),
   ],
@@ -16,7 +21,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3000', // Указываем адрес бэкенда
+        target: 'http://localhost:3000',
         changeOrigin: true,
         secure: false,
       },

@@ -65,7 +65,7 @@ main {
   border-radius: 15px;
   background-color: #EAECEE;
   &:hover {
-    background-color: #3a1564;
+    background-color: #0d6efd;
     color: white;
     transition: 0.8s;
   }
@@ -93,12 +93,12 @@ main {
   }
 
   &:hover {
-    box-shadow: 2px 2px 7px rgb(16, 16, 159);
+    box-shadow: 2px 2px 7px #0d6efd;
     transform: scale(1.02);
   }
 
   &.select {
-    box-shadow: 2px 2px 7px rgb(12, 78, 12);
+    box-shadow: 2px 2px 7px rgb(15, 140, 15);
     transform: scale(1.02);
   }
 }

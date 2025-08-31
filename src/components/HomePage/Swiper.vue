@@ -12,16 +12,18 @@
           <!-- Левый блок -->
           <div class="col-12 col-md-6">
             <div class="rounded-3 bg-white p-4 h-100 d-flex flex-column">
-              <img src="/public/main.webp" class="carousel-item-img mb-3" alt="">
+              <img src="/main.webp" class="carousel-item-img mb-3" alt="">
               <div class="row">
                 <div class="col-12 col-md-8">
                 <span>
-                  ООО «МеталлРесурс НТ» является производителем металлоконструкций по чертежам заказчика.
+                  ООО «МеталлРесурс НТ» является производителем металлоконструкций <br> по чертежам заказчика
                 </span>
                 </div>
-                <div class="col-12 col-md-4">
-                  <button class="btn btn_write-us mt-3">
-                    Написать Нам
+                <div class="col-12 col-md-4 d-flex align-items-center">
+                  <button class="btn btn_write-us"
+                          data-bs-toggle="modal"
+                          data-bs-target="#sendRequest">
+                    Написать нам
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                          class="bi bi-pencil-square" viewBox="0 0 16 16">
                       <path
@@ -38,7 +40,7 @@
           <div v-show="!isMobile" class="col-12 col-md-6">
             <div class="rounded-3 bg-white p-4 h-100">
               <div class="d-flex align-items-center gap-3 mb-4">
-                <img src="/public/metal.png" alt="">
+                <img src="/metal.png" alt="">
                 <span class="fw-bold fs-5">Металлопрокат оптом и в розницу в Санкт-Петербурге и области</span>
               </div>
               <p>Компания ООО "МеталлРесурс НТ" - это официальный представитель признанных лидеров металлургии России и
@@ -58,16 +60,18 @@
           <!-- Левый блок -->
           <div class="col-12 col-md-6">
             <div class="rounded-3 bg-white p-4 h-100 d-flex flex-column">
-              <img src="/public/refactorMetal.jpg" class="carousel-item-img mb-3" alt="">
+              <img src="/refactorMetal.jpg" class="carousel-item-img mb-3" alt="">
               <div class="row">
                 <div class="col-12 col-md-8">
                 <span>
-                  Надежный поставщик металлопроката в Санкт-Петербурге и области
+                  Надежный поставщик металлопроката <br> в Санкт-Петербурге и области
                 </span>
                 </div>
-                <div class="col-12 col-md-4">
-                  <button class="btn btn_write-us mt-3">
-                    Написать Нам
+                <div class="col-12 col-md-4 d-flex align-items-center">
+                  <button class="btn btn_write-us "
+                          data-bs-toggle="modal"
+                          data-bs-target="#sendRequest">
+                    Написать нам
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                          class="bi bi-pencil-square" viewBox="0 0 16 16">
                       <path
@@ -84,8 +88,8 @@
           <div v-show="!isMobile" class="col-12 col-md-6">
             <div class="rounded-3 bg-white p-4 h-100">
               <div class="d-flex align-items-center gap-3 mb-4">
-                <img src="/public/equip.png" alt="" />
-                <span class="fw-bold fs-5">Надежный поставщик металлопроката <br> в Санкт-Петербурге и области</span>
+                <img src="/equip.png" alt="" />
+                <span class="fw-bold fs-5">Надежный поставщик металлопроката <br/> в Санкт-Петербурге и области</span>
               </div>
               <p>Услуги по резке металла в Санкт-Петербурге</p>
               <p>Выбирая ООО "МеталлРесурс НТ" в качестве поставщика, Вы получаете надежного партнера, способного
