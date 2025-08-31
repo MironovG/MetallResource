@@ -6,7 +6,7 @@
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <div class="d-flex align-items-center gap-2">
-                <a href="/"><img width="72" height="72" src="/logoMain.webp" alt="logo"></a>
+                <router-link to="/"><img width="72" height="72" src="/logoMain.webp" alt="logo"></router-link>
               </div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                       aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
